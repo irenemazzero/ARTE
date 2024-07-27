@@ -1,0 +1,434 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+}
+
+H1 {
+  margin: 16px 0px 8px 0px;
+}
+
+H1+p,
+H3+p {
+  margin: 0px 0px 8px 0px;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.link {
+  color: black;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  align-items: center;
+  text-decoration: none;
+}
+
+.link > span {
+  margin-right: 8px;
+}
+
+.link:hover {
+  color: #064f31;
+}
+
+.titolo {
+  color: #064F31;
+  font-weight: 600;
+}
+
+.sottotitolo {
+  color: #064F31;
+  font-weight: 500;
+  font-size: 28px;
+}
+
+header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 90px;
+  line-height: 90px;
+  background-color: #FFFAE6;
+  z-index: 999;
+}
+
+.barra ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.barra ul li {
+  display: inline-block;
+  font-size: 20px;
+  position: relative;
+}
+
+.barra ul li a {
+  text-decoration: none;
+  padding: 0 20px;
+  color: #064F31;
+  font-weight: bold;
+  font-size: 22px;
+
+}
+
+.barra ul li:hover a:after {
+  content: "";
+  width: 100%;
+  height: 5px;
+  background: #ffa10155;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.barra ul li a.active:after {
+  content: "";
+  width: 100%;
+  height: 5px;
+  background: #ffa101;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+
+
+a.box {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.blocks div:nth-child(1) a.box {
+  background-image: url("../images/The_Birth_of_Venus.jpeg");
+}
+
+.blocks div:nth-child(2) a.box {
+  background-image: url("../images/scultura_canova.jpg");
+}
+
+
+#car {
+  box-sizing: border-box;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.slide,
+.slide2 {
+  display: none
+}
+
+img {
+  vertical-align: middle;
+}
+
+.carosello {
+  width: 100%;
+  height: 500px;
+  position: relative;
+  margin: auto;
+}
+
+.prec,
+.succ {
+  cursor: pointer;
+  user-select: none;
+  position: absolute;
+  top: 50%;
+  width: 40px;
+  transition: 0.5s ease;
+  text-align: center;
+  font-size: 64px !important;
+  font-weight: 500 !important;
+  color: #FFF;
+}
+
+.succ {
+  right: 40px;
+}
+
+.prec {
+  left: 40px;
+}
+
+.prec:hover,
+.succ:hover {
+  font-weight: 600 !important;
+  font-size: 72px !important;
+}
+
+.blocks {
+  display: flex;
+  position: relative;
+  height: 500px;
+}
+
+.blocks>div {
+  width: 50%;
+  position: relative;
+}
+
+.blocks>div>a {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border: none;
+}
+
+.blocks>div>a>h1 {
+  font-weight: 800;
+  font-size: 64px;
+  color: #ffffff;
+}
+
+.slide {
+  height: inherit;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+}
+
+.slide:nth-child(1) {
+  background: url("../images/Le-ninfee-Claude-Manet.jpg");
+}
+
+.slide:nth-child(2) {
+  background: url("../images/Cappella-Sistina-Particolare.jpg");
+}
+
+.slide:nth-child(3) {
+  background: url("../images/domenica_pomeriggio.jpg");
+}
+
+.slide:nth-child(4) {
+  background: url("../images/quadro1.jpg");
+}
+
+.slide:nth-child(5) {
+  background: url("../images/quadro2.jpg");
+}
+
+.slide:nth-child(6) {
+  background: url("../images/quadro3.jpg");
+}
+
+.logo img {
+  max-height: 90px;
+  vertical-align: top;
+}
+
+.container {
+  width: 1100px;
+  margin: 0 auto;
+}
+
+.item-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.item-list>.item {
+  display: inline-block;
+  width: calc(25% - 16px);
+  position: relative;
+  margin: 12px 8px;
+  box-shadow:0 3px 4px 0 #00000088,0 3px 3px -2px #00000088,0 1px 8px 0 #00000088;
+}
+
+.item-list>.item:hover {
+  cursor: pointer;
+}
+
+.item-list>.item:nth-child(4n+1) {
+  margin-left: 0px;
+  margin-right: 12px;
+}
+
+.item-list>.item:nth-child(4n) {
+  margin-right: 0px;
+  margin-left: 12px;
+}
+
+.item-list>.item span {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  color: #fff;
+  font-weight: 700;
+  background: #00000055;
+}
+
+.item-list>.item span.opera {
+  justify-content: center;
+  align-items: end;
+  text-align: center;
+  padding: 20px 0px;
+  top: auto;
+  background: #00000033;
+}
+
+.item-list>.item img {
+  width: 100%;
+  min-height: 350px;
+  max-height: 350px;
+  object-fit: cover;
+}
+
+.item-list>.item img.opera,
+.item-list>.item span.opera {
+  display: none;
+}
+
+.item-list>.item.active img.opera,
+.item-list>.item.active span.opera {
+  display: flex;
+}
+
+.item-list>.item.active img.artista,
+.item-list>.item.active span.artista {
+  display: none;
+}
+
+.pittura .desc-list>.descrizione {
+  display: none;
+}
+
+.pittura .desc-list>.descrizione.visibile {
+  display: inline-block;
+}
+
+.pittura .item-list>.item {
+  display: none;
+}
+
+.pittura .item-list>.item.visibile {
+  display: inline-block;
+}
+
+footer {
+  bottom: 0;
+  width: 100%;
+  height: 90px;
+  background-color: #FFFAE6;
+  z-index: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 35px;
+}
+
+footer>ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+}
+
+footer>ul>li {
+  padding-right: 10px;
+}
+
+footer a {
+  display: flex;
+  color: #000;
+  align-items: center;
+  text-decoration: none;
+}
+
+footer a:hover {
+  display: flex;
+  color: #064f31;
+  font-weight: 500;
+  align-items: center;
+  text-decoration: none;
+}
+
+.blocks div a.box {
+  -webkit-filter: grayscale(70%);
+  -moz-filter: grayscale(50%);
+  -ms-filter: grayscale(50%);
+  -o-filter: grayscale(50%);
+  filter: gray;
+  opacity: 1;
+  transition: opacity .2s .3s, -webkit-filter .3s;
+  transition: filter .3s, opacity .2s .3s;
+  transition: filter .3s, opacity .2s .3s, -webkit-filter .3s;
+}
+
+.blocks div:hover a.box {
+  filter: none;
+  -webkit-filter: grayscale(0);
+  -moz-filter: grayscale(0);
+  -ms-filter: grayscale(0);
+  -o-filter: grayscale(0);
+  cursor: pointer;
+  opacity: 1;
+}
+
+.musei .item-list>.item span {
+  opacity: 0;
+}
+
+.musei .item-list>.item:hover span {
+  opacity: 1;
+  transition: opacity .2s .3s, -webkit-filter .3s;
+  transition: filter .3s, opacity .2s .3s;
+  transition: filter .3s, opacity .2s .3s, -webkit-filter .3s;
+  background: #00000055;
+}
+
+.musei .item-list>.item {
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(50%);
+  -ms-filter: grayscale(50%);
+  -o-filter: grayscale(50%);
+  filter: gray;
+  opacity: 1;
+  transition: opacity .2s .3s, -webkit-filter .3s;
+  transition: filter .3s, opacity .2s .3s;
+  transition: filter .3s, opacity .2s .3s, -webkit-filter .3s;
+  
+}
+
+.musei .item-list .item:hover {
+  filter: none;
+  -webkit-filter: grayscale(0);
+  -moz-filter: grayscale(0);
+  -ms-filter: grayscale(0);
+  -o-filter: grayscale(0);
+  cursor: pointer;
+  opacity: 1;
+}
+
+.blocks div:hover a.box>h1 {
+  font-size: 72px;
+}
+
+.musei .item-list>.item img {
+  height: 100%;
+  min-height: auto;
+  max-height: none;
+}
